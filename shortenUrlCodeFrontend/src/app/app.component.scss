@@ -1,5 +1,5 @@
 $box-shadow: 10px 10px 65px rgba(0, 0, 0, 0.5);
-$label-shadow: 15px 15px 50px rgba(24, 163, 197, 0.5);
+$text-shadow: 1px -1.5px 2px rgba(royalblue, 0.5);
 
 #container {
     width:100vh;
@@ -10,14 +10,22 @@ $label-shadow: 15px 15px 50px rgba(24, 163, 197, 0.5);
     position: absolute;
     padding:0;
 }
+
+h1, h2, h3, h4, h5, h6 {
+
+    position: relative;
+    margin-top: 2em;
+    width:50%;
+    left: 20%;
+
+    color:grey;
+}
   
 .inputBox {
     display: flex;
     flex-direction: column;
-
-    row-gap: 5px;
+    
     font-weight: 200;
-
     padding: 20px;
     margin: 50px;
     
@@ -37,5 +45,17 @@ button {
 
 label {
     color: rgba($color: royalblue, $alpha: 1.0);
-    font-weight: 400;
+    font-weight: 300;
+    text-shadow: $text-shadow;
+    font-size: 16pt;
+}
+
+input[type=text], a {
+    font-size: 14pt;
+}
+
+@media (max-width: 720px) {
+    .inputBox {
+        flex-direction: row;
+    }   
 }
