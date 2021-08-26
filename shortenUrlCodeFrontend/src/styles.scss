@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+$document-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$document-font-color: darkgreen;
+$document-font-size: 16pt;
+
+
+
+body {
+    background-color: rgba(139, 202, 202, 1);
+}
+
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

@@ -1,0 +1,24 @@
+<div id="container">
+  <div class="inputBox">
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Digite a Url</label>
+      <div class="input-group mb-3">
+        <input class="form-control" name="longUrl" [(ngModel)]="longUrl" placeholder="URL completa">
+        <button class="btn btn-outline-secondary btn-primary" type="button" (click)="encurtarUrl()">Encurtar URL</button>
+      </div>
+    </div>
+
+    {{ longUrl }}
+
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Url curta de acesso:</label>
+      <a name="urlEncurtada" [href]="longUrl"> {{ shortenUrl }} </a>
+    </div>
+  </div>
+
+  <div id="mensagensErro" *ngIf="errorMessage.length > 0" class="alert alert-warning">
+    <span class="glyphicon glyphicon-exclamation" aria-hidden="true"></span>
+    {{ errorMessage }}
+  </div>
+</div>
+<!--<router-outlet></router-outlet>-->
